@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banking Application</h1>
+    </header>
+    <main>
+        <section id="balance">
+            <h2>Account Balance</h2>
+            <p id="balance-display">$1000</p>
+        </section>
+        <section id="transfer">
+            <h2>Fund Transfer</h2>
+            <form id="transfer-form">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount">
+                <label for="recipient">Recipient:</label>
+                <input type="text" id="recipient" name="recipient">
+                <button type="submit">Transfer</button>
+            </form>
+        </section>
+        <section id="history">
+            <h2>Transaction History</h2>
+            <ul id="transaction-list">
+                <li>Transaction 1: $100 to Nitesh Mishra</li>
+                <li>Transaction 2: $50 to Aniket Mishra </li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
