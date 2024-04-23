@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label><br />
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label><br />
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="outer">
+                <a onclick="validate()" href="" id="btn">Login</a>
+            </div>
+            <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+        </form>
+    </div>
+    <script>
+        const email = document.getElementById('username');
+        const password = document.getElementById('password');
+        
+        // Function to validate the fields  
+        function validate() {
+            const a = document.querySelector('#btn');
+            console.log(email.value + ' ' + password.value)
+            if (email.value === 'aniket@gmail.com' && password.value === 'Aniket@2125') {
+                alert("successfull")
+                a.href = "index.html";
+                localStorage.setItem('username', email.value);
+                return true;
+            }
+            else {
+                alert('Invalid username or password. Please try again.');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
